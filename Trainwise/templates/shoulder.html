@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trainwise</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        /* overflow-y: scroll; */
+        height: 100vh; 
+        overflow-x: hidden;
+        overflow-y: auto;
+        scroll-behavior: smooth;
+    }
+    .navbar {
+        background-color: #333;
+        overflow: hidden;
+    }
+    .navbar a {
+        float: right;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+    }
+    .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+    .navbar a.active {
+        background-color: #666;
+    }
+    .navbar .logo {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-family: cursive;
+        font-size: 30px;
+        background: linear-gradient(to right, #f32170, #ff6b08);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .navbarright{
+        margin-top: 15px;
+        
+    }
+    
+    div.scroll-container {
+        position: relative;
+      background-color: #333;
+      overflow: auto;
+       white-space: nowrap;
+       padding: 8px 8px 8px 8px;
+       
+    }
+    .scroll-container img{
+        padding-right: 15px;
+    }
+    .lounges{
+        position: relative;
+        top:15px;
+    }
+    h1{
+        position: absolute;
+        top: 20%;
+        left:60%;
+        font-size: 80px;
+        color: #7a2f2f;
+        text-shadow: 2px 2px 2px rgb(167, 100, 89);
+        font-style: oblique;
+    }
+   
+    h4{
+        position:absolute;
+        top: 40%;
+        left:65%;
+    }
+    .button{
+        border: blue;
+        position: absolute;
+        top: 70%;
+        left:75%;
+        background-color: #b07166;
+        padding: 10px 32px;
+        font-size:21px ;
+        border-radius: 5px;
+    }
+    
+    
+    
+    
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#" class="logo">trainwise</a>
+    <div class="navbarright">
+        <a href="templates/home.html" class="active">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Login</a>
+    </div>
+</div>
+
+<div class="lounges">
+    <img src="static/shoulder_exerc.jpg" alt="shoulder" width="1000" height="550">
+</div>
+
+<h1>SHOULDER</h1>
+
+<h4>&nbsp; &nbsp; &nbsp; &nbsp;Exercise: Shoulder Press<br>
+    <ul>
+      <li>Target Muscles: Shoulders (Deltoids)</li><br>
+      <li>Description: Hold dumbbells or a barbell at shoulder height. Push weight overhead until arms are fully extended.</li><br>
+      <li>Benefits: Strengthens shoulder muscles, improves shoulder stability and upper body strength.</li>
+    </ul>
+    </h4>
+
+    <button type="button" class="button">  Start </button>
+
+<div class="scroll-container">
+    
+    <a href="lunges.html">
+        <img src="static/lounges_exerc.jpg" alt="lounges exercise" height="300" width="300"> 
+     </a>
+     <a href="biceps.html">
+         <img src="static/biceps_exerc.jpg" alt="biceps exercise" height="300" width="300">
+     </a>
+     <a href="shoulder.html">
+        <img src="static/shoulder_exerc.jpg" alt="shoulder exercise" height="300" width="300">
+     </a>
+     <a href="crunches.html">
+        <img src="static/crunches.jpg" alt="pushup exercise" height="300" width="300">
+     </a>
+     <img src="static/pushup_exe.jpg" alt="pushup exercise" height="300" width="300">
+  </div>
+
+</body>
+</html>
