@@ -103,7 +103,7 @@
     <div class="navbarright">
         <a href="templates/home.html" class="active">Home</a>
         <a href="#">About Us</a>
-        <a href="#">Login</a>
+        <a href="login.html">Login</a>
     </div>
 </div>
 
@@ -120,6 +120,8 @@
     </ul>
     </h4>
 
+    <button type="button" class="button" id="button">  Start </button>
+    <button type="button" class="login" id="login" name="login">  Login </button>
 <div class="scroll-container">
     
     <a href="lunges.html">
@@ -137,7 +139,33 @@
      <img src="static/pushup_exe.jpg" alt="pushup exercise" height="300" width="300">
   </div>
 
-  <button type="button" class="button">  Start </button>
+  
 
+  <!-- <script>
+    function activate(){
+        fetch('/call-my-function') // Send a GET request to the backend route
+                .then(response => response.text())
+                .then(data => console.log(data)) // Log the response from the server
+                .catch(error => console.error('Error:', error));
+        }
+
+        document.getElementById('button').addEventListener('click', activate);
+    </script> -->
+
+    <script>
+    function activate(){
+        fetch('/start-biceps') // Send a GET request to the backend route
+                .then(response => response.text())
+                .then(data => console.log(data)) // Log the response from the server
+                .catch(error => console.error('Error:', error));
+        }
+
+        function load_login() {
+        window.location.href = '/login'; // Redirect to the login page
+    }
+
+        document.getElementById('button').addEventListener('click', activate);
+        document.getElementById('login').addEventListener('click',load_login);
+    </script>
 </body>
 </html>

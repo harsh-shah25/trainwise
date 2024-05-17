@@ -118,8 +118,18 @@
       <li>Benefits: Improves lower body strength and flexibility.</li>
     </ul>
     </h4>
-    <button type="button" class="button">  Start </button>
+    <button type="button" class="button" id="button"> Start </button>
 
+    <script>
+        function activate(){
+            fetch('/start-lunges') // Send a GET request to the backend route
+                    .then(response => response.text())
+                    .then(data => console.log(data)) // Log the response from the server
+                    .catch(error => console.error('Error:', error));
+            }
+    
+            document.getElementById('button').addEventListener('click', activate);
+        </script>
 
 <div class="scroll-container">
     
