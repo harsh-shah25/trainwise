@@ -104,7 +104,7 @@
     <div class="navbarright">
         <a href="templates/home.html" class="active">Home</a>
         <a href="#">About Us</a>
-        <a href="#">Login</a>
+        <a href="{{ url_for('login') }}">Login</a>
     </div>
 </div>
 
@@ -124,7 +124,7 @@
 
     <button type="button" class="button" id="button"> Start </button>
 
-    <script>
+    <!-- <script>
         function activate(){
             fetch('/start-shoulder') // Send a GET request to the backend route
                     .then(response => response.text())
@@ -133,8 +133,26 @@
             }
     
             document.getElementById('button').addEventListener('click', activate);
-        </script>
+
+             
+        </script>-->
         
+        <script>
+            function activate() {
+                fetch('/start-shoulder')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok ' + response.statusText);
+                        }
+                        return response.text();
+                    })
+                    .then(data => console.log(data))
+                    .catch(error => console.error('Error:', error));
+            }
+            
+            document.getElementById('button').addEventListener('click', activate);
+            </script>
+            
 <div class="scroll-container">
     
     <a href="lunges.html">

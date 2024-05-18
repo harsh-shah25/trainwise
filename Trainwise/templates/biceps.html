@@ -101,9 +101,9 @@
 <div class="navbar">
     <a href="#" class="logo">trainwise</a>
     <div class="navbarright">
-        <a href="templates/home.html" class="active">Home</a>
+        <a href="#" class="active">Home</a>
         <a href="#">About Us</a>
-        <a href="login.html">Login</a>
+        <a href="{{ url_for('login') }}">Login</a>
     </div>
 </div>
 
@@ -121,7 +121,7 @@
     </h4>
 
     <button type="button" class="button" id="button">  Start </button>
-    <button type="button" class="login" id="login" name="login">  Login </button>
+    <!-- <button type="button" class="login" id="login" name="login">  Login </button> -->
 <div class="scroll-container">
     
     <a href="lunges.html">
@@ -160,12 +160,12 @@
                 .catch(error => console.error('Error:', error));
         }
 
-        function load_login() {
-        window.location.href = '/login'; // Redirect to the login page
-    }
+    //     function load_login() {
+    //     window.location.href = '/login'; // Redirect to the login page
+    // }
 
         document.getElementById('button').addEventListener('click', activate);
-        document.getElementById('login').addEventListener('click',load_login);
+        // document.getElementById('login').addEventListener('click',load_login);
     </script>
 </body>
 </html>
